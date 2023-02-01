@@ -5,16 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 
+import { FooterComponent } from './footer/footer.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { NavBarService } from './header/navBar.service';
+import { DbserviceApiService } from './services/dbservice-api.service';
+
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent,
+    NavBarComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, AppRoutingModule],
+  providers: [NavBarService,DbserviceApiService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
