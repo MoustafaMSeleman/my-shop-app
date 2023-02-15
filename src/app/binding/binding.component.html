@@ -1,0 +1,40 @@
+<p>----------------------Binding----------------------</p>
+<!-- Interpolation -->
+<h1>{{ name }}</h1>
+
+<!-- Property Binding -->
+<img [src]="imgUrl" >
+
+<!-- Event Binding -->
+<div>
+    <button (click)="incrementCount()">Click</button>
+    <p>{{ count }}</p>
+</div>
+
+<!-- Two-way Binding -->
+<div>
+    <input type="text" [(ngModel)]="email">
+    <p>{{ email }}</p>
+
+</div>
+
+<!-- Split Two-way Binding -- Without Adding additional code  -->
+<div>
+    <input type="text" [ngModel]="username" (ngModelChange)="updateUsername($event)" >
+    <p>{{ username }}</p>
+</div>
+
+<!-- Split Two-way Binding -- With Adding additional code  -->
+<div>
+    <input type="text" [ngModel]="username2" (ngModelChange)="updateUsername2($event)">
+    <p>{{ username2 }}</p>
+</div>
+
+<!-- Getters and Setters -->
+<div>
+    <input type="text" [(ngModel)]="phone">
+    <p>{{ phone }}</p>
+</div>
+
+
+<p>----------------------Binding----------------------</p>

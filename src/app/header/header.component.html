@@ -1,11 +1,52 @@
 
-<p>header works!</p>
 
 <div class="navItems">
   <ul id="ulist_navItems" *ngFor="let item of menuItems">
-    <li><a href="#">{{ item }}</a></li>
+    <li><a href="#">
+      <section>
+        
+        <div class="example-button-row">
+          
+          <button mat-button color="primary" >{{ item }}</button>
+          
+        </div>
+      </section>
+      <!-- <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon> -->
+      
+    </a></li>
   </ul>
 </div>
-<script src="./script.js"></script>
+<div (click)="onDivClick()">
+<button (click)="onSave($event)">SAVE</button>
+
+</div>
+<input type="text" placeholder="onBlur" (keyup)="onKeyUp($event)" (blur)="onBlur()">
+<input type="text" placeholder="onEnter" (keyup.enter)="onKeyEnter($event)" >
+<input type="text" placeholder="name"  #name (keyup.enter)="onKeyEnterWithTemplate(name)"/>
+<p id="hiddenP"></p>
+<p>{{ name.value }}</p>
+<!-- <button mat-raised-button color="primary">Primary</button> -->
+
+<!-- <h3>Interpolation : {{ testBindingString }}</h3>
+<img [src]="imageUrl">
+<img src="imageUrl"> -->
+
+
+  <h2 class = "text-success">Class Binding</h2>
+  <h2 [class] = "textClass" class="text-danger">Class Binding</h2>
+  <h2 class="text-danger" [class] = "textSpecial" >Class Binding</h2>
+  <h3 [class.text-danger]="!hasError">Error!</h3>
+  <h4 [ngClass]="currentClasses">ngClass</h4>
+  <h5 [style.color]="'orange'">Style Binding</h5>
+  <h5 [style.color]="!hasError ? 'red': 'blue'">Style Binding2</h5>
+  <h2 [ngStyle]="titleStyle">ngStyle</h2>
+
+  <!-- Template Variable -->
+  <input #namex type="text" >
+  <button type="button" (click)="tempVar(namex.value)">Show Template Var</button>
+  <p id="p4"></p>
+
+
+<!-- <script src="./script.js"></script> -->
 
 

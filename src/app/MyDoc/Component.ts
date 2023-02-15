@@ -78,21 +78,32 @@
                                               </div>
 
 
-   .............
-   | Directives |
-   .............
+   ......................
+   | Component Lifecycle |
+   ......................
 
-    are defined as classes that can add new behaviour to the elements || edit the exists beahaviour
+   - a component instance has a lifecycle
+     starts when 
+           . Angular instantiates the component class
+           . And renders the component view along with its child views
 
-    the purpose of the directives is maneuver the DOM, be it by adding new elements to DOM .....
+     ends when
+           . Angular destorys the component instance 
+           . And removes its rendered template from the DOM.
 
-    Directives are meant to be a function that executes when found in the DOM by the Angular Compiler
+   - Directives have a similar lifecycle.
 
-    we have an array at nav-bar.component.ts, and want to display it in the .html
-    we will use *ngFor directive with <ul>
-    <ul *ngFor="let "></ul>
+   - Your app can use "lifecycle hook methods" to tap into key events in the lifecycle
+     of a component or directive to 
+        . initialize new instances,
+        . initiate change detection when needed,
+        . respond to updates during change detection
+        . clean up before deletion of instances
 
-
-
-
- */
+     ................   
+   - lifecylye hook .
+     ................
+       - an interface that allows you to tap into the lifecycle of components and directives
+        as they are created, updated and destroyed.
+         ...........
+      

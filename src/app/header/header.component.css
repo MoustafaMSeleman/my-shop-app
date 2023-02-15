@@ -1,0 +1,66 @@
+
+  .navItems{
+  background-color: white;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  height: max-content;
+  float: left;
+
+  }
+  section {
+    display: table;
+  }
+  
+  .example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+  }
+  
+  .example-button-row {
+    display: table-cell;
+    max-width: 600px;
+  }
+  
+  .example-button-row .mat-mdc-button-base {
+    margin: 8px 8px 8px 0;
+  }
+  
+  .example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  li{
+    text-decoration: none;
+    list-style-type: none;
+    align-items: baseline;
+    float: left;
+  }
+  #ulist_navItems{
+    float: left;
+    margin: 5px ;
+    padding: 0%;
+  }
+
+  .text-success{
+    color:green;
+  }
+  .text-danger{
+    color:red;
+  }
+  .text-special{
+    font-style: italic;
+  }

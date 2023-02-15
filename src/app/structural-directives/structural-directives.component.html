@@ -1,0 +1,74 @@
+<!-- Simple Example ngIF -->
+<p>  ------------------------- ngIf -------------------------  </p>
+<p *ngIf="true">Moustafa</p>
+<p *ngIf="false">Moustafa</p>
+
+<div *ngIf="show; else anotherDiv">
+    
+    <p>In the main div</p>
+
+</div>
+<ng-template #anotherDiv>
+    <h2>In the else div</h2>
+</ng-template>
+
+
+<div *ngIf="show; then display ; else hide">
+
+
+</div>
+<ng-template #display>
+    <p>Display</p>
+</ng-template>
+
+<ng-template #hide>
+    <p>Hide</p>
+</ng-template>
+<button (click)="showOrHide()">{{ buttonString }}</button>
+<p>  ------------------------- ngIf -------------------------  </p>
+
+<p>  --------------------------------------------------------  </p>
+
+<p>  ------------------------- ngSwitch -------------------------  </p>
+<div [ngSwitch]="color">
+   <p *ngSwitchCase="'red'">RED</p>
+   <p *ngSwitchCase="'blue'">BLUE</p>
+   <p *ngSwitchDefault>Default</p>
+</div>
+<button (click)="changeColor()">Change Color</button>
+<p>{{ color }}</p>
+<p>  --------------------------------------------------------  </p>
+<p>  ------------------------- ngFor -------------------------  </p>
+
+<div>
+    <ul *ngFor="let p of pages">
+        <li>{{ p }}</li>
+    </ul>
+</div>
+
+<div *ngFor="let p of pages; index as i">
+    <h3>{{ i }}- {{ p }}</h3>
+</div>
+
+<h3>Even index element will appears as true</h3>
+
+<div *ngFor="let p of pages; even as e">
+    <h4>{{ e }}- {{ p }}</h4>
+</div>
+
+<h3>Odd index element will appears as true</h3>
+
+<div *ngFor="let p of pages; odd as o">
+
+    <h4>{{ o }}- {{ p }}</h4>
+</div>
+
+<h3>First element will be true beside</h3>
+<div *ngFor="let p of pages; first as f">
+    <h4>{{ f }}- {{ p }}</h4>
+</div>
+
+<h3>Last element will be true beside</h3>
+<div *ngFor="let p of pages; last as l">
+    <h4>{{ l }}- {{ p }}</h4>
+</div>
